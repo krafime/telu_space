@@ -1,3 +1,80 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Telu Space</string>
+
+    <string name="signup">Sign Up</string>
+    <string name="signup_success_title">Yeay!</string>
+    <string name="signup_success_message">Your account has been created. Let\'s log in.</string>
+    <string name="title_signup_page">Complete your profile below</string>
+
+    <string name="login">Log In</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="message_login_page">Enter your credentials below</string>
+    <string name="title_login_page">Let\'s Log In.</string>
+    <string name="login_sucess_message">You have successfully logged in. Can\'t wait to get in?</string>
+    <string name="signin_success_body">You have successfully logged in. Can\'t wait to get in?</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="message_welcome_page">See all the photos shared by users, only on StoryApp!</string>
+    <string name="title_welcome_page">Welcome to StoryApp!</string>
+    <string name="name">Name</string>
+    <string name="message_main_page">Welcome to StoryApp.</string>
+    <string name="logout">Log Out</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="button_ok">Let\'s Go</string>
+    <string name="photo">Photo</string>
+    <string name="username">Username</string>
+    <string name="maps">Maps</string>
+    <string name="camera">Camera</string>
+    <string name="home">Home</string>
+    <string name="description">Description</string>
+    <string name="upload">Upload</string>
+    <string name="gallery">Gallery</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="warn_upload_photo">Please select a photo to upload</string>
+    <string name="provide">com.dicoding.storyapp</string>
+    <string name="change_language">Language</string>
+
+    <string name="morning">morning</string>
+    <string name="noon">afternoon</string>
+    <string name="evening">afternoon</string>
+    <string name="night">night</string>
+    <string name="good">Good</string>
+    <string name="upload_your_image">Upload your image</string>
+    <string name="imagepreview">imagePreview</string>
+
+    <string name="add_widget">Add widget</string>
+    <string name="appwidget_text">Story Apps</string>
+    <string name="empty_text">NO DATA</string>
+    <string name="login_success">Login Success</string>
+
+    <string name="email">Email</string>
+    <string name="prompt_email">Email</string>
+    <string name="error_invalid_email">Invalid email format!</string>
+    <string name="signup_error_email_taken">Email has been used!</string>
+
+    <string name="invalid_email_or_password">Invalid email or password!</string>
+    <string name="error_field_required">This field is required!</string>
+
+    <string name="prompt_password">Password</string>
+    <string name="password">Password</string>
+    <string name="error_password_short">Password must 8 character!</string>
+
+    <string name="insert_name">Insert your name</string>
+    <string name="insert_email">Insert your email</string>
+    <string name="insert_password">Insert your password</string>
+    <string name="feature_not_available">FEATURE NOT AVAILABLE!</string>
+    <string name="expired_session">Your session is expired!</string>
+    <string name="retry">Retry</string>
+
+    <string name="location_detection">Cannot detect location</string>
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satellite</string>
+    <string name="terrain_type">Terrain</string>
+    <string name="hybrid_type">Hybrid</string>
+    <string name="location">Location</string>
+    <string name="location_not_found">Location not found</string>
+
 </resources>
