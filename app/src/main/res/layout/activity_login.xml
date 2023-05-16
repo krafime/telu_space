@@ -75,7 +75,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textEmailAddress"
-            app:isEmail="true"
             tools:ignore="LabelFor,SpeakableTextPresentCheck"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -116,8 +115,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword"
-            app:isPassword="true"
-            app:minLength="8"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
