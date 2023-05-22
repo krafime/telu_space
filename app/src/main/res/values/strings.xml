@@ -6,6 +6,8 @@
     <string name="email">Email</string>
     <string name="insert_email">Masukkan email</string>
     <string name="insert_password">Masukkan password</string>
+    <string name="masukkan_nomor_telepon">Masukkan nomor telepon</string>
+    <string name="input_name">Masukkan nama anda</string>
 
 
 </resources>
