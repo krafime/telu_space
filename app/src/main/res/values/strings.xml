@@ -3,6 +3,9 @@
     <string name="teluspace">TeluSpace</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="insert_email">Masukkan email</string>
+    <string name="insert_password">Masukkan password</string>
 
 
 </resources>
