@@ -14,7 +14,9 @@ class MainActivity : AppCompatActivity() {
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        intent = Intent(this@MainActivity, WelcomeActivity::class.java)
+        supportActionBar?.hide()
+
+        intent = Intent(this@MainActivity, BookingActivity::class.java)
         startActivity(intent)
     }
 }
