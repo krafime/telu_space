@@ -10,72 +10,77 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/red">
+        android:background="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/img_logout"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/logout"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_greeting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_greeting"
+            tools:ignore="ContentDescription" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/tv_greeting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
-            android:text="Selamat Pagi"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
-            android:text="Dzaky"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="Selamat Pagi, Dzaky"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/tv_booking"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             android:alpha=".6"
             android:text="Daftar Booking hari ini"
             android:textColor="@color/white"
             android:textSize="12sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/textView11"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+            app:layout_constraintStart_toStartOf="@+id/tv_greeting"
+            app:layout_constraintTop_toBottomOf="@+id/tv_greeting" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_booked"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/tv_booking"
             tools:listitem="@layout/booked_row_item" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:background="@drawable/round_corner_top"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintCircleRadius="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_booked">
 
             <View
-                android:id="@+id/rectangle_1"
+                android:id="@+id/anchor"
                 android:layout_width="52dp"
                 android:layout_height="10dp"
                 android:layout_alignParentTop="true"
@@ -97,7 +102,14 @@
                 android:background="@drawable/box"
                 android:clipToOutline="true"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rectangle_1" />
+                app:layout_constraintTop_toBottomOf="@+id/anchor">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/telyu" />
+
+            </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/box2"
@@ -108,22 +120,47 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/box"
                 android:clipToOutline="true"
-                app:layout_constraintEnd_toStartOf="@+id/box3"
+                app:layout_constraintEnd_toStartOf="@+id/booking"
                 app:layout_constraintStart_toEndOf="@+id/box1"
-                app:layout_constraintTop_toBottomOf="@+id/rectangle_1">
+                app:layout_constraintTop_toBottomOf="@+id/anchor">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/telyu"
+                    tools:ignore="ContentDescription" />
 
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/box3"
+                android:id="@+id/booking"
                 android:layout_width="52dp"
                 android:layout_height="52dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/box"
                 android:clipToOutline="true"
-                app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
-                app:layout_constraintStart_toStartOf="@+id/rectangle_1"
-                app:layout_constraintTop_toBottomOf="@+id/rectangle_1" />
+                android:gravity="center"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/anchor"
+                app:layout_constraintStart_toStartOf="@+id/anchor"
+                app:layout_constraintTop_toBottomOf="@+id/anchor">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/booking_icon"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Booking"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/booking"
+                app:layout_constraintStart_toStartOf="@+id/booking"
+                app:layout_constraintTop_toBottomOf="@+id/booking" />
 
             <RelativeLayout
                 android:id="@+id/box4"
@@ -133,8 +170,15 @@
                 android:background="@drawable/box"
                 android:clipToOutline="true"
                 app:layout_constraintEnd_toStartOf="@+id/box5"
-                app:layout_constraintStart_toEndOf="@+id/box3"
-                app:layout_constraintTop_toBottomOf="@+id/rectangle_1" />
+                app:layout_constraintHorizontal_bias="0.49"
+                app:layout_constraintStart_toEndOf="@+id/booking"
+                app:layout_constraintTop_toBottomOf="@+id/anchor">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/telyu" />
+            </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/box5"
@@ -145,7 +189,13 @@
                 android:background="@drawable/box"
                 android:clipToOutline="true"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rectangle_1" />
+                app:layout_constraintTop_toBottomOf="@+id/anchor">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/telyu" />
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/textView14"
@@ -167,7 +217,6 @@
                 android:layout_marginTop="8dp"
                 android:alpha="0.66"
                 android:background="@drawable/box_berita"
-                android:clipToOutline="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.491"
@@ -177,8 +226,6 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

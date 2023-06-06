@@ -42,7 +42,7 @@
             android:ems="10"
             android:focusable="false"
             android:focusableInTouchMode="false"
-            android:inputType="text|number"
+            android:inputType="none"
             app:passwordToggleEnabled="true"
             tools:layout_editor_absoluteX="32dp"
             tools:layout_editor_absoluteY="252dp" />
@@ -69,6 +69,7 @@
         app:boxCornerRadiusTopStart="8dp"
         app:boxStrokeColor="@color/red"
         app:boxStrokeWidth="2dp"
+        app:errorEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_pilih_gedung"
@@ -80,6 +81,130 @@
             android:layout_height="wrap_content"
             android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_pilih_ruangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Pilih Ruangan"
+        app:layout_constraintStart_toStartOf="@+id/ed_gedung"
+        app:layout_constraintTop_toBottomOf="@+id/ed_gedung" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ed_ruangan"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Ruangan"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxStrokeColor="@color/red"
+        app:boxStrokeWidth="2dp"
+        app:errorEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pilih_ruangan"
+        app:startIconDrawable="@drawable/ic_calender">
+
+        <AutoCompleteTextView
+            android:id="@+id/pilihan_ruangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Waktu Mulai"
+        app:layout_constraintStart_toStartOf="@+id/ed_ruangan"
+        app:layout_constraintTop_toBottomOf="@id/ed_ruangan" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ed_start_time"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:hint="--:--"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxStrokeColor="@color/red"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_start_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_start_time"
+        app:startIconDrawable="@drawable/ic_clock_black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="none"
+            app:passwordToggleEnabled="true"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="252dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Waktu Selesai"
+        app:layout_constraintStart_toStartOf="@+id/ed_end_time"
+        app:layout_constraintTop_toBottomOf="@id/ed_ruangan" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ed_end_time"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:hint="--:--"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxStrokeColor="@color/red"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/ed_ruangan"
+        app:layout_constraintTop_toBottomOf="@+id/tv_end_time"
+        app:startIconDrawable="@drawable/ic_clock_black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_end_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="none"
+            app:passwordToggleEnabled="true"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="252dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="350dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/send"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/ed_ruangan"
+        app:layout_constraintStart_toStartOf="@+id/ed_ruangan"
+        app:layout_constraintTop_toBottomOf="@+id/ed_start_time" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

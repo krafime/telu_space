@@ -17,7 +17,7 @@
         android:padding="0dp">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/header_row"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -29,7 +29,7 @@
             card_view:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/live"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -45,12 +45,12 @@
             android:layout_height="7dp"
             android:layout_marginEnd="5dp"
             android:background="@drawable/ellipse"
-            card_view:layout_constraintBottom_toBottomOf="@+id/textView"
-            card_view:layout_constraintEnd_toStartOf="@+id/textView"
-            card_view:layout_constraintTop_toTopOf="@+id/textView" />
+            card_view:layout_constraintBottom_toBottomOf="@+id/live"
+            card_view:layout_constraintEnd_toStartOf="@+id/live"
+            card_view:layout_constraintTop_toTopOf="@+id/live" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/pemesan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -58,20 +58,21 @@
             android:text="Pihak Pemesan : Dzaky"
             android:textSize="12sp"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/textView3" />
+            card_view:layout_constraintTop_toBottomOf="@+id/header_row" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/keperluan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="Keperluan : Acara IUM"
             android:textSize="12sp"
-            card_view:layout_constraintTop_toBottomOf="@+id/textView5"
-            tools:layout_editor_absoluteX="8dp" />
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/pemesan" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/tv_waktu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -80,10 +81,10 @@
             android:textSize="12sp"
             android:textStyle="bold"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/textView4" />
+            card_view:layout_constraintTop_toBottomOf="@+id/keperluan" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/tv_jam_sesi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -95,11 +96,11 @@
             card_view:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/tanggal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="08.30 - 11.30"
+            android:text="12 Mei 2023"
             android:textSize="12sp"
             android:textStyle="bold"
             card_view:layout_constraintBottom_toBottomOf="parent"
@@ -107,28 +108,29 @@
             card_view:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/tv_tanggal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Tanggal"
             android:textSize="12sp"
             android:textStyle="bold"
-            card_view:layout_constraintStart_toStartOf="@+id/textView8"
-            card_view:layout_constraintTop_toBottomOf="@+id/textView4" />
+            card_view:layout_constraintStart_toStartOf="@+id/tanggal"
+            card_view:layout_constraintTop_toBottomOf="@+id/keperluan" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/tv_ruangan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:text="Ruangan"
             android:textSize="12sp"
             android:textStyle="bold"
-            card_view:layout_constraintStart_toStartOf="@+id/textView12"
-            tools:layout_editor_absoluteY="118dp" />
+            card_view:layout_constraintBottom_toTopOf="@+id/ruangan"
+            card_view:layout_constraintStart_toStartOf="@+id/ruangan" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/ruangan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"

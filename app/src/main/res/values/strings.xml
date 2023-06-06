@@ -8,6 +8,6 @@
     <string name="insert_password">Masukkan password</string>
     <string name="masukkan_nomor_telepon">Masukkan nomor telepon</string>
     <string name="input_name">Masukkan nama anda</string>
-
-
+    <string name="send">Kirimkan</string>
+    <string name="tunggu">Tunggu beberapa saat…</string>
 </resources>
