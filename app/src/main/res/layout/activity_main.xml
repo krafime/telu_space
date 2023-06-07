@@ -112,9 +112,10 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/box2"
+                android:id="@+id/box_qr"
                 android:layout_width="52dp"
                 android:layout_height="52dp"
+                android:padding="10dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="16dp"
@@ -125,9 +126,9 @@
                 app:layout_constraintTop_toBottomOf="@+id/anchor">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/telyu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_camera"
                     tools:ignore="ContentDescription" />
 
             </RelativeLayout>
@@ -157,13 +158,39 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="Booking"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/booking"
                 app:layout_constraintStart_toStartOf="@+id/booking"
                 app:layout_constraintTop_toBottomOf="@+id/booking" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAlignment="center"
+                android:text="Lokasi\nGedung"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/box_maps"
+                app:layout_constraintStart_toStartOf="@+id/box_maps"
+                app:layout_constraintTop_toBottomOf="@+id/box_maps" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Scan QR"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/box_qr"
+                app:layout_constraintStart_toStartOf="@+id/box_qr"
+                app:layout_constraintTop_toBottomOf="@+id/box_qr" />
+
             <RelativeLayout
-                android:id="@+id/box4"
+                android:id="@+id/box_maps"
+                android:padding="6dp"
                 android:layout_width="52dp"
                 android:layout_height="52dp"
                 android:layout_marginTop="16dp"
@@ -175,9 +202,9 @@
                 app:layout_constraintTop_toBottomOf="@+id/anchor">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/telyu" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_location" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -202,13 +229,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:alpha=".6"
                 android:text="Berita hari ini"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/box1" />
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <RelativeLayout
                 android:id="@+id/box_berita"

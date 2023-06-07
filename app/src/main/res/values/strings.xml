@@ -10,4 +10,13 @@
     <string name="input_name">Masukkan nama anda</string>
     <string name="send">Kirimkan</string>
     <string name="tunggu">Tunggu beberapa saat…</string>
+    <string name="scanning">Scanning..</string>
+    <string name="normal_type">Default</string>
+    <string name="satellite_type">Satellite</string>
+    <string name="terrain_type">Terrain</string>
+    <string name="hybrid_type">Hybrid</string>
+    <string name="api_maps">AIzaSyCcAoTeT1obYToVrcPUy1p0emiKn2C0gFg</string>
+    <string name="cant_detect_location">Cannot detect location</string>
+    <string name="expired_session">Expired Session</string>
+
 </resources>

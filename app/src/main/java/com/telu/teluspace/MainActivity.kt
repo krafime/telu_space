@@ -2,17 +2,18 @@ package com.telu.teluspace
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.telu.teluspace.databinding.ActivityMainBinding
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
@@ -37,7 +38,8 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         adapter = ListBookAdapter()
-        binding.rvBooked.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.rvBooked.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.rvBooked.setHasFixedSize(true)
         binding.rvBooked.adapter = adapter
 
@@ -54,7 +56,14 @@ class MainActivity : AppCompatActivity() {
             }
             Toast.makeText(this, "Logout berhasil", Toast.LENGTH_SHORT).show()
         }
-
+        binding.boxQr.setOnClickListener {
+            val intent = Intent(this@MainActivity, ScanActivity::class.java)
+            startActivity(intent)
+        }
+        binding.boxMaps.setOnClickListener {
+            val intent = Intent(this@MainActivity, MapsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     @Deprecated("Deprecated in Java")
@@ -63,7 +72,11 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed()
         } else {
             backPressedOnce = true
-            Toast.makeText(this, "Tekan tombol back sekali lagi jika ingin keluar", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this,
+                "Tekan tombol back sekali lagi jika ingin keluar",
+                Toast.LENGTH_SHORT
+            ).show()
 
             Handler(Looper.getMainLooper()).postDelayed({
                 backPressedOnce = false
@@ -71,3 +84,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+

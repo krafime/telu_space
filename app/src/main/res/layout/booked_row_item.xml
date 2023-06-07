@@ -76,12 +76,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
             android:text="Waktu"
             android:textSize="12sp"
             android:textStyle="bold"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/keperluan" />
+            card_view:layout_constraintBottom_toTopOf="@+id/tv_jam_sesi"
+            card_view:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/tv_jam_sesi"
@@ -111,12 +111,12 @@
             android:id="@+id/tv_tanggal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
             android:text="Tanggal"
             android:textSize="12sp"
             android:textStyle="bold"
-            card_view:layout_constraintStart_toStartOf="@+id/tanggal"
-            card_view:layout_constraintTop_toBottomOf="@+id/keperluan" />
+            card_view:layout_constraintBottom_toTopOf="@+id/tanggal"
+            card_view:layout_constraintStart_toStartOf="@+id/tanggal" />
 
         <TextView
             android:id="@+id/tv_ruangan"
